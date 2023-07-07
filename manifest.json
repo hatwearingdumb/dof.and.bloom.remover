@@ -1,0 +1,9 @@
+{
+    "name": "Depth_Of_Field_And_Bloom_Remover",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/HatWearingMann/dof.and.bloom.remover",
+    "description": "This mod removes the bloom and depth of field post processing effects from the game, and optionally from the lobby as well.",
+    "dependencies": [
+        "northstar-Northstar-1.9.6"
+    ]
+}

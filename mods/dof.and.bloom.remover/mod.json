@@ -1,0 +1,23 @@
+{
+	"Name": "HatMann.dof.and.bloom.remover",
+	"Description": "Disables depth of field and bloom special effects.",
+	"Version": "v1.0",
+	"LoadPriority": 2,
+	
+	"ConVars": [
+	{
+            "Name": "disableLobbyEffects",
+            "DefaultValue": "0" //set to 1 if you want the lobby to be sharp as well
+        },
+	],
+	
+	"Scripts": [{
+			"Path": "dofBloomCommands.nut",
+			"RunOn": "CLIENT",
+			"ClientCallback": {
+				"After": "initDofAndBloomCommands"
+			}
+		}
+	]
+}
+//Special thanks to BooKooNooN, Spoon, uniboi and cat_or_nya for the help with making this mod, hats off for your great help gentlemen.
