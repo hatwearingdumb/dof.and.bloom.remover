@@ -1,8 +1,8 @@
 {
 	"Name": "HatMann.dof.and.bloom.remover",
 	"Description": "Disables depth of field and bloom special effects.",
-	"Version": "v1.0",
-	"LoadPriority": 2,
+	"Version": "v1.0.1",
+	"LoadPriority": 6,
 	
 	"ConVars": [
 	{
@@ -11,11 +11,19 @@
         },
 	],
 	
-	"Scripts": [{
+	"Scripts": [
+		{
 			"Path": "dofBloomCommands.nut",
 			"RunOn": "CLIENT",
 			"ClientCallback": {
 				"After": "initDofAndBloomCommands"
+			}
+		},
+		{
+			"Path": "dofBloomSettings.nut",
+			"RunOn": "UI",
+			"UICallback": {
+				"Before": "initDofAndBloomSettings"
 			}
 		}
 	]
