@@ -1,31 +1,46 @@
 {
 	"Name": "HatMann.dof.and.bloom.remover",
-	"Description": "Disables depth of field and bloom special effects.",
-	"Version": "v1.0.1",
-	"LoadPriority": 6,
+	"Description": "Protocol 3: Protect the eyesight.",
+	"Version": "v1.1.0",
+	"LoadPriority": 7,
 	
 	"ConVars": [
-	{
-            "Name": "disableLobbyEffects",
-            "DefaultValue": "0" //set to 1 if you want the lobby to be sharp as well
-        },
+		{
+			"Name": "keepEffectsInLobby",
+			"DefaultValue": "1",
+			"HelpString": "Specifies whether the effects should stay enabled in the lobby.",
+			"Flags": 16777216
+		},
+		{
+			"Name": "inGameEffectCommands",
+			"DefaultValue": "mat_gamma 0.85; mat_disable_bloom 1; dof_enable 0; mat_bloom_scalefactor_scalar 0",
+			"HelpString": "Specifies what commands should be executed by the plugin, after entering a game.",
+			"Flags": 16777216
+		},
+		{
+			"Name": "inLobbyEffectCommands",
+			"DefaultValue": "mat_gamma 1; mat_disable_bloom 0; dof_enable 1; mat_bloom_scalefactor_scalar 1.0",
+			"HelpString": "Specifies what commands should be executed by the plugin, after entering the lobby.",
+			"Flags": 16777216
+		}
 	],
 	
 	"Scripts": [
 		{
-			"Path": "dofBloomCommands.nut",
+			"Path": "dfbr_commands_runner.nut",
 			"RunOn": "CLIENT",
 			"ClientCallback": {
-				"After": "initDofAndBloomCommands"
+				"After": "initDfbrCommands"
 			}
 		},
 		{
-			"Path": "dofBloomSettings.nut",
+			"Path": "dfbr_mod_settings.nut",
 			"RunOn": "UI",
 			"UICallback": {
-				"Before": "initDofAndBloomSettings"
+				"Before": "initDfbrSettings"
 			}
 		}
 	]
 }
-//Special thanks to BooKooNooN, Spoon, uniboi and cat_or_nya for the help with making this mod, hats off for your great help gentlemen.
+
+// Special thanks to BooKooNooN, Spoon, uniboi and cat_or_nya for the help, with making this mod. Hats off, for your great help!
