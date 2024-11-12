@@ -1,9 +1,0 @@
-{
-    "name": "Depth_Of_Field_And_Bloom_Remover",
-    "version_number": "1.1.0",
-    "website_url": "https://github.com/hatwearingdumb/dof.and.bloom.remover",
-    "description": "Disables depth of field and bloom special effects. Supports custom commands!",
-    "dependencies": [
-        "northstar-Northstar-1.28.3"
-    ]
-}
